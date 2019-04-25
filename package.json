@@ -1,8 +1,8 @@
 {
-  "name": "mst-workflow",
-  "version": "1.0.0",
+  "name": "@jimengio/ci-progress-webpack-plugin",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/progress.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --config webpack/dev.js",
     "watch": "webpack-dev-server --hot --config webpack/dev.js",

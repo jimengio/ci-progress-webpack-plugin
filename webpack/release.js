@@ -10,7 +10,7 @@ let { matchCssRule, matchFontsRule, matchTsReleaseRule } = require("./shared");
 let splitChunks = require("./split-chunks");
 let dllManifest = require("./dll/manifest-release.json");
 
-let ProgressPlugin = require("../lib/progress").default;
+let ProgressPlugin = require("../lib/progress");
 
 module.exports = {
   mode: "production",
@@ -63,7 +63,7 @@ module.exports = {
       append: false,
     }),
     new DuplicatePackageCheckerPlugin(),
-    ProgressPlugin({ interval: 400 }),
+    ProgressPlugin({ interval: 0 }),
     // new BundleAnalyzerPlugin(),
   ],
 };
