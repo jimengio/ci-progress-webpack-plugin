@@ -7,9 +7,9 @@ let showPercent = (x: number) => {
   return `${(x * 100).toFixed()}%`;
 };
 
-let addLog = (percentage: number, message: string, extra: string, ...args) => {
+let addLog = (percentage: number, message: string, ...args: string[]) => {
   let cost = ((Date.now() - startedTime) / 1000).toFixed(1) + "s";
-  console.info(showPercent(percentage), cost, message || "", extra || "");
+  console.info(showPercent(percentage), cost, message || "", args[0] || "");
 };
 
 let ProgressPlugin = (options?: { interval: number }) => {
