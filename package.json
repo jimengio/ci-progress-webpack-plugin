@@ -10,7 +10,6 @@
     "dll-release": "time webpack --config webpack/dll-release.js",
     "release": "rm -rfv dist/* && yarn dll-release && time webpack --config webpack/release.js",
     "build": "yarn release",
-    "serve": "http-server dist/ -s",
     "compile": "tsc -d --project tsconfig-compile.json --outDir lib/",
     "prepare": "yarn compile",
     "postinstall": "rm -rfv node_modules/@types/*/node_modules/@types/react"
@@ -34,7 +33,6 @@
     "fork-ts-checker-webpack-plugin": "^4.1.2",
     "html-webpack-plugin": "^4.0.4",
     "html-webpack-tags-plugin": "^2.0.17",
-    "http-server": "^0.12.1",
     "immer": "^6.0.3",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
